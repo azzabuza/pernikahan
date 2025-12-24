@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahligai Wedding - Solusi Pernikahan Feminin & Elegan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #f8e3e9;
+            --secondary-color: #f9f0f4;
+            --accent-color: #e6a4b4;
+            --accent-light: #f3d1da;
+            --dark-color: #8c6a7d;
+            --text-color: #5a4a4f;
+            --light-color: #ffffff;
+            --gold-color: #e8c8a9;
+            --shadow: 0 8px 25px rgba(140, 106, 125, 0.1);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --radius: 12px;
+            --radius-large: 20px;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: #fefcfd;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(140, 106, 125, 0.08);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 0;
+        }
+        
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.3rem;
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo:before {
+            content: '✦';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-right: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 35px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, var(--accent-color), var(--gold-color));
+            transition: var(--transition);
+            border-radius: 10px;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+        
+        .nav-links a:hover:after, .nav-links a.active:after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-color);
+            background: var(--primary-color);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(248, 227, 233, 0.85), rgba(249, 240, 244, 0.9)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text-color);
+            text-align: center;
+            padding: 180px 0 120px;
+            margin-bottom: 60px;
+            border-radius: 0 0 var(--radius-large) var(--radius-large);
+        }
+        
+        .hero h1 {
+            font-size: 3.6rem;
+            margin-bottom: 25px;
+            color: var(--dark-color);
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+            color: var(--text-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+            color: var(--light-color);
+            padding: 16px 42px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border: none;
+            text-transform: none;
+            font-size: 1rem;
+            box-shadow: 0 6px 20px rgba(230, 164, 180, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-light), var(--accent-color));
+            transition: var(--transition);
+            z-index: -1;
+            border-radius: 50px;
+        }
+        
+        .btn:hover:before {
+            width: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(230, 164, 180, 0.4);
+            color: var(--light-color);
+        }
+        
+        .btn-small {
+            padding: 12px 28px;
+            font-size: 0.9rem;
+        }
+        
+        /* Service Sections */
+        .service-section {
+            padding: 100px 0;
+        }
+        
+        .service-section:nth-child(even) {
+            background-color: var(--secondary-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-color), var(--gold-color));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: var(--text-color);
+            max-width: 700px;
+            margin: 25px auto 0;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 35px;
+        }
+        
+        .product-card {
+            background-color: var(--light-color);
+            border-radius: var(--radius-large);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(140, 106, 125, 0.15);
+        }
+        
+        .product-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--gold-color));
+            z-index: 1;
+        }
+        
+        .product-img-container {
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.1);
+        }
+        
+        .product-content {
+            padding: 25px;
+        }
+        
+        .product-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .product-price {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .product-description {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .product-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        
+        .product-features li:before {
+            content: '✓';
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: var(--radius-large);
+            margin: 40px 0;
+        }
+        
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 40px 30px;
+            background-color: var(--light-color);
+            border-radius: var(--radius);
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(140, 106, 125, 0.05);
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(140, 106, 125, 0.1);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.8rem;
+            color: var(--dark-color);
+        }
+        
+        .feature-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius-large);
+            box-shadow: 20px 20px 0 var(--primary-color);
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark-color) 0%, #7a5a6d 100%);
+            color: var(--light-color);
+            padding: 80px 0 30px;
+            border-radius: var(--radius-large) var(--radius-large) 0 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            color: var(--light-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: var(--gold-color);
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        .contact-info {
+            list-style: none;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            margin-right: 15px;
+            color: var(--gold-color);
+            margin-top: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 25px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--light-color);
+            margin-right: 15px;
+            text-decoration: none;
+            transition: var(--transition);
+            border-radius: 50%;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--gold-color);
+            color: var(--dark-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(90, 74, 79, 0.9);
+            z-index: 2000;
+            overflow-y: auto;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background-color: var(--light-color);
+            margin: 50px auto;
+            padding: 50px;
+            width: 90%;
+            max-width: 700px;
+            border-radius: var(--radius-large);
+            position: relative;
+            animation: slideUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 20px 60px rgba(90, 74, 79, 0.3);
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px) scale(0.9); opacity: 0; }
+            to { transform: translateY(0) scale(1); opacity: 1; }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--dark-color);
+            transition: var(--transition);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+        }
+        
+        .close-modal:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+            background-color: var(--accent-light);
+        }
+        
+        .modal-title {
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--dark-color);
+            font-size: 0.95rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            font-family: 'Raleway', sans-serif;
+            transition: var(--transition);
+            background-color: #fefcfd;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background-color: var(--light-color);
+            box-shadow: 0 0 0 3px rgba(230, 164, 180, 0.2);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+            color: var(--light-color);
+            border: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition);
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 20px rgba(230, 164, 180, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .submit-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-light), var(--accent-color));
+            transition: var(--transition);
+            z-index: -1;
+            border-radius: 50px;
+        }
+        
+        .submit-btn:hover:before {
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(230, 164, 180, 0.4);
+        }
+        
+        .whatsapp-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .whatsapp-link i {
+            margin-right: 10px;
+        }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366, #1ebe5c);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            z-index: 999;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(5deg);
+            color: white;
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Flower decoration */
+        .flower-decoration {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .flower-1 {
+            top: 10%;
+            left: 5%;
+            transform: rotate(15deg);
+        }
+        
+        .flower-2 {
+            bottom: 15%;
+            right: 5%;
+            transform: rotate(-10deg);
+        }
+        
+        /* Service Navigation */
+        .service-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .service-nav-btn {
+            padding: 12px 28px;
+            background-color: var(--light-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 50px;
+            color: var(--text-color);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .service-nav-btn:hover, .service-nav-btn.active {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+            color: var(--light-color);
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.4rem;
+            }
+            
+            .about {
+                gap: 40px;
+            }
+            
+            .about-img {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                flex-direction: column;
+                background-color: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                text-align: left;
+                transition: var(--transition);
+                box-shadow: 0 10px 30px rgba(140, 106, 125, 0.1);
+                padding: 100px 30px 30px;
+                z-index: 999;
+                justify-content: flex-start;
+                overflow-y: auto;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+                margin-left: 0;
+            }
+            
+            .nav-links a {
+                font-size: 1.2rem;
+                padding: 10px 0;
+                display: block;
+            }
+            
+            .hero {
+                padding: 150px 0 100px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 35px;
+            }
+            
+            .about-img {
+                box-shadow: 10px 10px 0 var(--primary-color);
+            }
+            
+            .service-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .service-nav-btn {
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .product-title {
+                font-size: 1.4rem;
+            }
+            
+            .modal-content {
+                padding: 30px 25px;
+                width: 95%;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+            
+            .btn, .submit-btn {
+                padding: 14px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Flower decorations -->
+    <div class="flower-decoration flower-1">🌸</div>
+    <div class="flower-decoration flower-2">🌸</div>
+    
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Mahligai</a>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="#wedding-dress">Baju Pengantin</a></li>
+                    <li><a href="#photobooth">Photobooth</a></li>
+                    <li><a href="#makeup">Makeup</a></li>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Pernikahan Impian dengan Sentuhan Feminin & Elegan</h1>
+            <p>Mahligai Wedding menghadirkan solusi lengkap pernikahan dengan nuansa feminin, romantis, dan penuh keanggunan. Dari gaun pengantin eksklusif hingga dekorasi photobooth yang memukau.</p>
+            <div class="service-nav">
+                <a href="#wedding-dress" class="service-nav-btn active">Baju Pengantin</a>
+                <a href="#photobooth" class="service-nav-btn">Photobooth</a>
+                <a href="#makeup" class="service-nav-btn">Makeup Pernikahan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Dress Section -->
+    <section id="wedding-dress" class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sewa Baju Pengantin</h2>
+                <p class="section-subtitle">Koleksi eksklusif gaun pengantin dengan sentuhan feminin, lace, dan payet untuk penampilan sempurna di hari pernikahan Anda</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Gaun Pengantin A-Line" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Gaun A-Line Classic</h3>
+                        <div class="product-price">Rp 4.500.000</div>
+                        <p class="product-description">Gaun pengantin dengan siluet A-Line klasik yang cocok untuk semua bentuk tubuh. Dibuat dengan lace halus dan payet elegan.</p>
+                        <ul class="product-features">
+                            <li>Bahan satin premium</li>
+                            <li>Detail lace tangan</li>
+                            <li>Payet kristal elegan</li>
+                            <li>Free alteration 2x</li>
+                            <li>Sewa 2 hari</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Gaun A-Line Classic" data-price="4500000">Pesan Sekarang</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Gaun Mermaid Luxurious" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Gaun Mermaid Luxurious</h3>
+                        <div class="product-price">Rp 6.800.000</div>
+                        <p class="product-description">Gaun pengantin model mermaid dengan detail kristal Swarovski dan train panjang yang dramatis untuk tampilan yang memukau.</p>
+                        <ul class="product-features">
+                            <li>Bahan silk organza</li>
+                            <li>Kristal Swarovski</li>
+                            <li>Train panjang 2 meter</li>
+                            <li>Free veil matching</li>
+                            <li>Sewa 3 hari</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Gaun Mermaid Luxurious" data-price="6800000">Pesan Sekarang</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1515427518479-2e5c4c145c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Gaun Boho Chic" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Gaun Boho Chic</h3>
+                        <div class="product-price">Rp 3.800.000</div>
+                        <p class="product-description">Gaun pengantin bergaya boho dengan sleeve lace transparan dan detail bunga embroideri untuk tampilan yang natural dan romantis.</p>
+                        <ul class="product-features">
+                            <li>Bahan chiffon flowy</li>
+                            <li>Detail embroideri bunga</li>
+                            <li>Sleeve lace transparan</li>
+                            <li>Free flower crown</li>
+                            <li>Sewa 2 hari</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Gaun Boho Chic" data-price="3800000">Pesan Sekarang</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1534253897182-db8c449f7bfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Gaun Princess Ball Gown" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Gaun Princess Ball Gown</h3>
+                        <div class="product-price">Rp 7.500.000</div>
+                        <p class="product-description">Gaun pengantin ball gown seperti putri dengan layer tulle yang voluminous dan detail corset untuk siluet yang sempurna.</p>
+                        <ul class="product-features">
+                            <li>Bahan tulle premium</li>
+                            <li>Corset dengan boning</li>
+                            <li>Layer tulle voluminous</li>
+                            <li>Free petticoat</li>
+                            <li>Sewa 3 hari</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Gaun Princess Ball Gown" data-price="7500000">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photobooth Section -->
+    <section id="photobooth" class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sewa Photobooth</h2>
+                <p class="section-subtitle">Photobooth dengan dekorasi feminin, backdrop bunga, dan aksesoris cantik untuk mengabadikan momen bahagia Anda dan tamu undangan</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Photobooth Classic" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Photobooth Classic Elegant</h3>
+                        <div class="product-price">Rp 2.200.000</div>
+                        <p class="product-description">Paket photobooth standar dengan backdrop bunga klasik, aksesoris sederhana, dan cetak foto instan 4x6 untuk kenang-kenangan.</p>
+                        <ul class="product-features">
+                            <li>Backdrop bunga klasik 3x3m</li>
+                            <li>Aksesoris sederhana</li>
+                            <li>Cetak foto 4x6 (100 lembar)</li>
+                            <li>Album digital online</li>
+                            <li>Durasi 4 jam</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Photobooth Classic Elegant" data-price="2200000">Pesan Sekarang</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Photobooth Premium" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Photobooth Premium Luxury</h3>
+                        <div class="product-price">Rp 3.500.000</div>
+                        <p class="product-description">Paket photobooth premium dengan backdrop bunga mewah, aksesoris lengkap, green screen, dan cetak foto instan dengan frame custom.</p>
+                        <ul class="product-features">
+                            <li>Backdrop bunga mewah 4x4m</li>
+                            <li>Aksesoris premium lengkap</li>
+                            <li>Green screen technology</li>
+                            <li>Cetak foto dengan frame custom</li>
+                            <li>Durasi 6 jam</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Photobooth Premium Luxury" data-price="3500000">Pesan Sekarang</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" alt="Photobooth Glamour" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Photobooth Glamour Gold</h3>
+                        <div class="product-price">Rp 4.800.000</div>
+                        <p class="product-description">Paket photobooth glamour dengan tema gold dan rose gold, backdrop kristal, aksesoris mewah, dan photo booth dengan filter khusus.</p>
+                        <ul class="product-features">
+                            <li>Backdrop kristal gold theme</li>
+                            <li>Aksesoris mewah rose gold</li>
+                            <li>Magic mirror technology</li>
+                            <li>Filter khusus instagramable</li>
+                            <li>Durasi 8 jam</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Photobooth Glamour Gold" data-price="4800000">Pesan Sekarang</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Photobooth Garden" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Photobooth Garden Romance</h3>
+                        <div class="product-price">Rp 2.800.000</div>
+                        <p class="product-description">Paket photobooth dengan tema garden romance, backdrop bunga hidup, aksesoris alami, dan efek foto soft glowing.</p>
+                        <ul class="product-features">
+                            <li>Backdrop bunga hidup segar</li>
+                            <li>Aksesoris garden theme</li>
+                            <li>Efek foto soft glowing</li>
+                            <li>Wooden frame natural</li>
+                            <li>Durasi 5 jam</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Photobooth Garden Romance" data-price="2800000">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Makeup Section -->
+    <section id="makeup" class="service-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Jasa Makeup Pernikahan</h2>
+                <p class="section-subtitle">Layanan makeup natural glowing, soft glam, atau bold look oleh makeup artist berpengalaman menggunakan produk high-end untuk tampilan flawless sepanjang hari</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Makeup Natural Glow" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Makeup Natural Glow</h3>
+                        <div class="product-price">Rp 1.500.000</div>
+                        <p class="product-description">Makeup natural dengan efek glowing skin, subtle eyeshadow, dan lip tint untuk tampilan segar dan natural sepanjang hari.</p>
+                        <ul class="product-features">
+                            <li>Base makeup natural</li>
+                            <li>Eyeshadow subtle neutral</li>
+                            <li>Lip tint atau lip gloss</li>
+                            <li>Touch up 1x</li>
+                            <li>Produk waterproof</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Makeup Natural Glow" data-price="1500000">Pesan Sekarang</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1556228575462-8712d6e13706?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Makeup Soft Glam" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Makeup Soft Glam</h3>
+                        <div class="product-price">Rp 2.200.000</div>
+                        <p class="product-description">Makeup soft glam dengan smokey eyes subtle, contouring yang defined, dan lips matte untuk tampilan elegan dan sophisticated.</p>
+                        <ul class="product-features">
+                            <li>Full coverage base</li>
+                            <li>Smokey eyes subtle</li>
+                            <li>Contouring defined</li>
+                            <li>Touch up 2x</li>
+                            <li>False eyelashes included</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Makeup Soft Glam" data-price="2200000">Pesan Sekarang</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Makeup Bridal Luxe" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Makeup Bridal Luxe</h3>
+                        <div class="product-price">Rp 3.500.000</div>
+                        <p class="product-description">Makeup bridal luxe dengan glitter eyes, bold lips, dan highlight intense untuk tampilan dramatis dan memukau di hari pernikahan.</p>
+                        <ul class="product-features">
+                            <li>Airbrush makeup</li>
+                            <li>Glitter eyeshadow</li>
+                            <li>Bold lip color</li>
+                            <li>Touch up 3x</li>
+                            <li>Produk luxury brands</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Makeup Bridal Luxe" data-price="3500000">Pesan Sekarang</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-img-container">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2087&q=80" alt="Makeup Complete Package" class="product-img">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Makeup Complete Package</h3>
+                        <div class="product-price">Rp 5.000.000</div>
+                        <p class="product-description">Paket lengkap makeup untuk pengantin, ibu pengantin, dan bridesmaids (maks 3 orang) dengan konsultasi khusus dan trial makeup.</p>
+                        <ul class="product-features">
+                            <li>Makeup pengantin utama</li>
+                            <li>Makeup ibu & bridesmaids</li>
+                            <li>Trial makeup 1x</li>
+                            <li>Full day touch up</li>
+                            <li>Konsultasi khusus</li>
+                        </ul>
+                        <button class="btn btn-small open-modal" data-service="Makeup Complete Package" data-price="5000000">Pesan Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Keunggulan Kami</h2>
+                <p class="section-subtitle">Mengapa ratusan calon pengantin mempercayakan hari istimewa mereka kepada Mahligai Wedding</p>
+            </div>
+            <div class="features-container">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="feature-title">Sentuhan Feminin</h3>
+                    <p>Setiap detail dirancang dengan nuansa feminin, romantis, dan elegan khusus untuk calon pengantin wanita.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="feature-title">Warna Soft & Elegant</h3>
+                    <p>Palet warna pastel dan soft tones yang menciptakan atmosfer romantis dan sophisticated.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="feature-title">Kualitas Premium</h3>
+                    <p>Produk dan layanan dengan standar kualitas tertinggi untuk hasil yang memuaskan dan tahan lama.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 class="feature-title">Tim Perempuan</h3>
+                    <p>Didukung oleh tim perempuan profesional yang memahami kebutuhan dan keinginan calon pengantin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div>
+                <img src="https://images.unsplash.com/photo-1520854221256-17463ccb8b9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Tentang Mahligai Wedding" class="about-img">
+            </div>
+            <div class="about-content">
+                <h2>Didedikasikan untuk Pengantin Perempuan</h2>
+                <p>Mahligai Wedding didirikan pada tahun 2015 oleh perempuan untuk perempuan, dengan misi memberikan pengalaman pernikahan yang feminin, elegan, dan tak terlupakan bagi setiap calon pengantin.</p>
+                <p>Kami memahami bahwa setiap perempuan menginginkan hari pernikahan yang sempurna dengan sentuhan personal dan penuh makna. Oleh karena itu, kami menawarkan solusi yang dapat disesuaikan dengan kepribadian, gaya, dan impian Anda.</p>
+                <p>Tim kami terdiri dari perempuan-perempuan profesional yang berdedikasi untuk mewujudkan visi pernikahan impian Anda dengan detail yang sempurna.</p>
+                <a href="#contact" class="btn" style="margin-top: 20px;">Konsultasi Gratis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mahligai Wedding</h3>
+                    <p>Solusi lengkap dan elegan dengan sentuhan feminin untuk pernikahan impian Anda. Kami hadir untuk membuat hari istimewa Anda sempurna dan penuh kenangan indah.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontak Kami</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Jl. Kemang Raya No. 15, Jakarta Selatan</span></li>
+                        <li><i class="fas fa-phone"></i> <span>(021) 2278-9191</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>hello@mahligaiwedding.com</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Senin - Sabtu: 09.00 - 18.00</span></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Layanan Cepat</h3>
+                    <ul class="contact-info" style="margin-top: 10px;">
+                        <li><a href="#wedding-dress" style="color: #f3d1da; text-decoration: none;">Sewa Baju Pengantin</a></li>
+                        <li><a href="#photobooth" style="color: #f3d1da; text-decoration: none;">Sewa Photobooth</a></li>
+                        <li><a href="#makeup" style="color: #f3d1da; text-decoration: none;">Makeup Pernikahan</a></li>
+                        <li><a href="#about" style="color: #f3d1da; text-decoration: none;">Tentang Kami</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Mahligai Wedding. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #e8c8a9;"></i> for your special day</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20Mahligai%20Wedding,%20saya%20ingin%20konsultasi%20tentang%20layanan%20pernikahan" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal for Booking Form -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title" id="modalServiceTitle">Form Pemesanan</h2>
+            
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="serviceName">Layanan yang Dipilih</label>
+                    <input type="text" id="serviceName" class="form-control" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Nama Lengkap *</label>
+                    <input type="text" id="name" class="form-control" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Nomor WhatsApp *</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Contoh: 081234567890" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="nama@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="rentalDate">Tanggal Acara *</label>
+                    <input type="date" id="rentalDate" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">Harga Paket *</label>
+                    <input type="text" id="price" class="form-control" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Catatan Khusus (opsional)</label>
+                    <textarea id="message" class="form-control" rows="4" placeholder="Silakan tulis detail tambahan, preferensi khusus, atau pertanyaan yang Anda miliki"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fab fa-whatsapp" style="margin-right: 10px;"></i>Kirim via WhatsApp
+                </button>
+            </form>
+            
+            <a href="#" class="whatsapp-link" id="directWhatsApp" target="_blank" style="display: none;">
+                <i class="fab fa-whatsapp"></i> Atau klik di sini untuk langsung chat WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.querySelector('i').classList.toggle('fa-bars');
+            menuToggle.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            const isClickInsideNav = navLinks.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+            }
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.padding = '0';
+                header.style.boxShadow = '0 5px 20px rgba(140, 106, 125, 0.1)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.padding = '0';
+                header.style.boxShadow = '0 4px 20px rgba(140, 106, 125, 0.08)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+        
+        // Modal Functionality
+        const modal = document.getElementById('bookingModal');
+        const closeModal = document.querySelector('.close-modal');
+        const openModalButtons = document.querySelectorAll('.open-modal');
+        const serviceNameInput = document.getElementById('serviceName');
+        const priceInput = document.getElementById('price');
+        const modalServiceTitle = document.getElementById('modalServiceTitle');
+        
+        // Open modal with service details
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const service = button.getAttribute('data-service');
+                const price = button.getAttribute('data-price');
+                
+                // Format price to Indonesian Rupiah
+                const formattedPrice = new Intl.NumberFormat('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR',
+                    minimumFractionDigits: 0
+                }).format(price);
+                
+                serviceNameInput.value = service;
+                priceInput.value = formattedPrice;
+                modalServiceTitle.textContent = `Pemesanan ${service}`;
+                
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Form submission to WhatsApp
+        const bookingForm = document.getElementById('bookingForm');
+        const directWhatsApp = document.getElementById('directWhatsApp');
+        
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const serviceName = document.getElementById('serviceName').value;
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const rentalDate = document.getElementById('rentalDate').value;
+            const price = document.getElementById('price').value;
+            const message = document.getElementById('message').value;
+            
+            // Format date to Indonesian format
+            const dateObj = new Date(rentalDate);
+            const formattedDate = dateObj.toLocaleDateString('id-ID', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Create WhatsApp message
+            let whatsappMessage = `Halo Mahligai Wedding, saya ingin memesan layanan pernikahan:\n\n`;
+            whatsappMessage += `*LAYANAN:* ${serviceName}\n`;
+            whatsappMessage += `*NAMA PEMESAN:* ${name}\n`;
+            whatsappMessage += `*TANGGAL ACARA:* ${formattedDate}\n`;
+            whatsappMessage += `*HARGA PAKET:* ${price}\n`;
+            
+            if (phone) {
+                whatsappMessage += `*WHATSAPP:* ${phone}\n`;
+            }
+            
+            if (email) {
+                whatsappMessage += `*EMAIL:* ${email}\n`;
+            }
+            
+            if (message) {
+                whatsappMessage += `*CATATAN:* ${message}\n`;
+            }
+            
+            whatsappMessage += `\nSaya tertarik dengan layanan ini. Bisakah saya mendapatkan informasi lebih lanjut?`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // WhatsApp business number (replace with actual number)
+            const whatsappNumber = "6281234567890";
+            
+            // Create WhatsApp URL
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            // Open WhatsApp in new tab
+            window.open(whatsappURL, '_blank');
+            
+            // Show direct WhatsApp link
+            directWhatsApp.href = whatsappURL;
+            directWhatsApp.style.display = 'block';
+            
+            // Reset form (except service and price)
+            document.getElementById('name').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('rentalDate').value = '';
+            document.getElementById('message').value = '';
+            
+            // Show success message
+            setTimeout(() => {
+                alert('Terima kasih atas minat Anda! Anda akan diarahkan ke WhatsApp untuk melanjutkan proses pemesanan. Tim kami akan merespon dengan cepat! 💕');
+            }, 300);
+        });
+        
+        // Set minimum date for rental date (today)
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('rentalDate').setAttribute('min', today);
+        
+        // Set default date to 30 days from now
+        const nextMonth = new Date();
+        nextMonth.setDate(nextMonth.getDate() + 30);
+        const defaultDate = nextMonth.toISOString().split('T')[0];
+        document.getElementById('rentalDate').value = defaultDate;
+        
+        // Service Navigation
+        const serviceNavBtns = document.querySelectorAll('.service-nav-btn');
+        
+        serviceNavBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all buttons
+                serviceNavBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get target section
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                // Scroll to target section
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add active class to nav link based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+            
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 150;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Add animation to product cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe product cards
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px) scale(0.95)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            observer.observe(card);
+        });
+        
+        // Observe feature items
+        document.querySelectorAll('.feature-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
