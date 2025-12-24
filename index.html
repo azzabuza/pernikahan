@@ -265,9 +265,12 @@
         
         /* Products Grid */
         .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 35px;
+            box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap:2rem;
+  padding: 2rem;
+  margin: 0;
         }
         
         .product-card {
