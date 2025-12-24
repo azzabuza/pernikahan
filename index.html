@@ -266,11 +266,11 @@
         /* Products Grid */
         .products-grid {
             box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap:2rem;
-  padding: 2rem;
-  margin: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            padding: 2rem;
+            margin: 0;
         }
         
         .product-card {
@@ -358,6 +358,80 @@
             color: var(--accent-color);
             font-weight: bold;
             margin-right: 10px;
+        }
+        
+        /* Product Action Buttons */
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn-detail {
+            display: inline-block;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+            text-transform: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            flex: 1;
+        }
+        
+        .btn-detail:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(140, 106, 125, 0.1);
+        }
+        
+        .btn-order {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+            color: var(--light-color);
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border: none;
+            text-transform: none;
+            font-size: 0.9rem;
+            box-shadow: 0 6px 20px rgba(230, 164, 180, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
+            flex: 1;
+        }
+        
+        .btn-order:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-light), var(--accent-color));
+            transition: var(--transition);
+            z-index: -1;
+            border-radius: 50px;
+        }
+        
+        .btn-order:hover:before {
+            width: 100%;
+        }
+        
+        .btn-order:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(230, 164, 180, 0.4);
+            color: var(--light-color);
         }
         
         /* Features Section */
@@ -750,6 +824,9 @@
             .hero h1 {
                 font-size: 3.2rem;
             }
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (max-width: 992px) {
@@ -932,10 +1009,11 @@
                             <li>Bahan satin premium</li>
                             <li>Detail lace tangan</li>
                             <li>Payet kristal elegan</li>
-                            <li>Free alteration 2x</li>
-                            <li>Sewa 2 hari</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Gaun A-Line Classic" data-price="4500000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Gaun A-Line Classic', '4500000', 'wedding-dress', 'Gaun pengantin dengan siluet A-Line klasik yang cocok untuk semua bentuk tubuh. Dibuat dengan lace halus dan payet elegan. Gaun ini memberikan tampilan yang anggun dan feminin, sempurna untuk pernikahan klasik.', ['Bahan satin premium', 'Detail lace tangan', 'Payet kristal elegan', 'Free alteration 2x', 'Sewa 2 hari'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Gaun A-Line Classic" data-price="4500000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -952,10 +1030,11 @@
                             <li>Bahan silk organza</li>
                             <li>Kristal Swarovski</li>
                             <li>Train panjang 2 meter</li>
-                            <li>Free veil matching</li>
-                            <li>Sewa 3 hari</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Gaun Mermaid Luxurious" data-price="6800000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Gaun Mermaid Luxurious', '6800000', 'wedding-dress', 'Gaun pengantin model mermaid dengan detail kristal Swarovski dan train panjang yang dramatis untuk tampilan yang memukau. Desain ini menonjolkan lekuk tubuh dengan elegan.', ['Bahan silk organza', 'Kristal Swarovski', 'Train panjang 2 meter', 'Free veil matching', 'Sewa 3 hari'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Gaun Mermaid Luxurious" data-price="6800000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -972,10 +1051,11 @@
                             <li>Bahan chiffon flowy</li>
                             <li>Detail embroideri bunga</li>
                             <li>Sleeve lace transparan</li>
-                            <li>Free flower crown</li>
-                            <li>Sewa 2 hari</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Gaun Boho Chic" data-price="3800000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Gaun Boho Chic', '3800000', 'wedding-dress', 'Gaun pengantin bergaya boho dengan sleeve lace transparan dan detail bunga embroideri untuk tampilan yang natural dan romantis. Sempurna untuk pernikahan outdoor atau tema rustic.', ['Bahan chiffon flowy', 'Detail embroideri bunga', 'Sleeve lace transparan', 'Free flower crown', 'Sewa 2 hari'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Gaun Boho Chic" data-price="3800000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -992,10 +1072,11 @@
                             <li>Bahan tulle premium</li>
                             <li>Corset dengan boning</li>
                             <li>Layer tulle voluminous</li>
-                            <li>Free petticoat</li>
-                            <li>Sewa 3 hari</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Gaun Princess Ball Gown" data-price="7500000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Gaun Princess Ball Gown', '7500000', 'wedding-dress', 'Gaun pengantin ball gown seperti putri dengan layer tulle yang voluminous dan detail corset untuk siluet yang sempurna. Memberikan kesan megah dan elegan.', ['Bahan tulle premium', 'Corset dengan boning', 'Layer tulle voluminous', 'Free petticoat', 'Sewa 3 hari'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Gaun Princess Ball Gown" data-price="7500000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1024,10 +1105,11 @@
                             <li>Backdrop bunga klasik 3x3m</li>
                             <li>Aksesoris sederhana</li>
                             <li>Cetak foto 4x6 (100 lembar)</li>
-                            <li>Album digital online</li>
-                            <li>Durasi 4 jam</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Photobooth Classic Elegant" data-price="2200000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Photobooth Classic Elegant', '2200000', 'photobooth', 'Paket photobooth standar dengan backdrop bunga klasik, aksesoris sederhana, dan cetak foto instan 4x6 untuk kenang-kenangan. Cocok untuk pernikahan dengan budget terbatas namun tetap elegan.', ['Backdrop bunga klasik 3x3m', 'Aksesoris sederhana', 'Cetak foto 4x6 (100 lembar)', 'Album digital online', 'Durasi 4 jam'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Photobooth Classic Elegant" data-price="2200000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -1044,10 +1126,11 @@
                             <li>Backdrop bunga mewah 4x4m</li>
                             <li>Aksesoris premium lengkap</li>
                             <li>Green screen technology</li>
-                            <li>Cetak foto dengan frame custom</li>
-                            <li>Durasi 6 jam</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Photobooth Premium Luxury" data-price="3500000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Photobooth Premium Luxury', '3500000', 'photobooth', 'Paket photobooth premium dengan backdrop bunga mewah, aksesoris lengkap, green screen, dan cetak foto instan dengan frame custom. Memberikan pengalaman fotografi yang lebih interaktif.', ['Backdrop bunga mewah 4x4m', 'Aksesoris premium lengkap', 'Green screen technology', 'Cetak foto dengan frame custom', 'Durasi 6 jam'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Photobooth Premium Luxury" data-price="3500000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -1064,10 +1147,11 @@
                             <li>Backdrop kristal gold theme</li>
                             <li>Aksesoris mewah rose gold</li>
                             <li>Magic mirror technology</li>
-                            <li>Filter khusus instagramable</li>
-                            <li>Durasi 8 jam</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Photobooth Glamour Gold" data-price="4800000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Photobooth Glamour Gold', '4800000', 'photobooth', 'Paket photobooth glamour dengan tema gold dan rose gold, backdrop kristal, aksesoris mewah, dan photo booth dengan filter khusus. Sangat cocok untuk pernikahan dengan tema glamour.', ['Backdrop kristal gold theme', 'Aksesoris mewah rose gold', 'Magic mirror technology', 'Filter khusus instagramable', 'Durasi 8 jam'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Photobooth Glamour Gold" data-price="4800000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -1084,10 +1168,11 @@
                             <li>Backdrop bunga hidup segar</li>
                             <li>Aksesoris garden theme</li>
                             <li>Efek foto soft glowing</li>
-                            <li>Wooden frame natural</li>
-                            <li>Durasi 5 jam</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Photobooth Garden Romance" data-price="2800000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Photobooth Garden Romance', '2800000', 'photobooth', 'Paket photobooth dengan tema garden romance, backdrop bunga hidup, aksesoris alami, dan efek foto soft glowing. Memberikan nuansa alam yang romantis dan segar.', ['Backdrop bunga hidup segar', 'Aksesoris garden theme', 'Efek foto soft glowing', 'Wooden frame natural', 'Durasi 5 jam'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Photobooth Garden Romance" data-price="2800000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1116,10 +1201,11 @@
                             <li>Base makeup natural</li>
                             <li>Eyeshadow subtle neutral</li>
                             <li>Lip tint atau lip gloss</li>
-                            <li>Touch up 1x</li>
-                            <li>Produk waterproof</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Makeup Natural Glow" data-price="1500000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Makeup Natural Glow', '1500000', 'makeup', 'Makeup natural dengan efek glowing skin, subtle eyeshadow, dan lip tint untuk tampilan segar dan natural sepanjang hari. Cocok untuk pengantin yang menginginkan tampilan fresh dan minimalis.', ['Base makeup natural', 'Eyeshadow subtle neutral', 'Lip tint atau lip gloss', 'Touch up 1x', 'Produk waterproof'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Makeup Natural Glow" data-price="1500000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -1136,10 +1222,11 @@
                             <li>Full coverage base</li>
                             <li>Smokey eyes subtle</li>
                             <li>Contouring defined</li>
-                            <li>Touch up 2x</li>
-                            <li>False eyelashes included</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Makeup Soft Glam" data-price="2200000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Makeup Soft Glam', '2200000', 'makeup', 'Makeup soft glam dengan smokey eyes subtle, contouring yang defined, dan lips matte untuk tampilan elegan dan sophisticated. Memberikan dimensi wajah yang lebih jelas namun tetap natural.', ['Full coverage base', 'Smokey eyes subtle', 'Contouring defined', 'Touch up 2x', 'False eyelashes included'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Makeup Soft Glam" data-price="2200000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -1156,10 +1243,11 @@
                             <li>Airbrush makeup</li>
                             <li>Glitter eyeshadow</li>
                             <li>Bold lip color</li>
-                            <li>Touch up 3x</li>
-                            <li>Produk luxury brands</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Makeup Bridal Luxe" data-price="3500000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Makeup Bridal Luxe', '3500000', 'makeup', 'Makeup bridal luxe dengan glitter eyes, bold lips, dan highlight intense untuk tampilan dramatis dan memukau di hari pernikahan. Untuk pengantin yang ingin tampil maksimal dan menawan.', ['Airbrush makeup', 'Glitter eyeshadow', 'Bold lip color', 'Touch up 3x', 'Produk luxury brands'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Makeup Bridal Luxe" data-price="3500000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
                 
@@ -1176,10 +1264,11 @@
                             <li>Makeup pengantin utama</li>
                             <li>Makeup ibu & bridesmaids</li>
                             <li>Trial makeup 1x</li>
-                            <li>Full day touch up</li>
-                            <li>Konsultasi khusus</li>
                         </ul>
-                        <button class="btn btn-small open-modal" data-service="Makeup Complete Package" data-price="5000000">Pesan Sekarang</button>
+                        <div class="product-actions">
+                            <button class="btn-detail" onclick="openDetailModal('Makeup Complete Package', '5000000', 'makeup', 'Paket lengkap makeup untuk pengantin, ibu pengantin, dan bridesmaids (maks 3 orang) dengan konsultasi khusus dan trial makeup. Solusi hemat untuk seluruh rombongan.', ['Makeup pengantin utama', 'Makeup ibu & bridesmaids', 'Trial makeup 1x', 'Full day touch up', 'Konsultasi khusus'])">Lihat Detail</button>
+                            <button class="btn-order open-modal" data-service="Makeup Complete Package" data-price="5000000">Pesan Sekarang</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1342,6 +1431,22 @@
         </div>
     </div>
 
+    <!-- Modal for Product Detail -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeDetailModal()">&times;</span>
+            <h2 class="modal-title" id="detailModalTitle">Detail Produk</h2>
+            
+            <div id="detailContent">
+                <!-- Content will be inserted here by JavaScript -->
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <button class="btn" id="detailOrderBtn" style="padding: 16px 40px;">Pesan Sekarang</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('menuToggle');
@@ -1390,44 +1495,138 @@
         
         // Modal Functionality
         const modal = document.getElementById('bookingModal');
-        const closeModal = document.querySelector('.close-modal');
+        const detailModal = document.getElementById('detailModal');
+        const closeModalButtons = document.querySelectorAll('.close-modal');
         const openModalButtons = document.querySelectorAll('.open-modal');
         const serviceNameInput = document.getElementById('serviceName');
         const priceInput = document.getElementById('price');
         const modalServiceTitle = document.getElementById('modalServiceTitle');
+        const detailModalTitle = document.getElementById('detailModalTitle');
+        const detailContent = document.getElementById('detailContent');
+        const detailOrderBtn = document.getElementById('detailOrderBtn');
         
-        // Open modal with service details
+        let currentDetailService = '';
+        let currentDetailPrice = '';
+        
+        // Open detail modal
+        function openDetailModal(service, price, category, description, features) {
+            currentDetailService = service;
+            currentDetailPrice = price;
+            
+            // Format price to Indonesian Rupiah
+            const formattedPrice = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+            }).format(price);
+            
+            detailModalTitle.textContent = service;
+            
+            // Create content for detail modal
+            let contentHTML = `
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <input type="text" class="form-control" value="${getCategoryName(category)}" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label>Harga</label>
+                    <input type="text" class="form-control" value="${formattedPrice}" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label>Deskripsi Lengkap</label>
+                    <textarea class="form-control" rows="4" readonly>${description}</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Fitur Utama</label>
+                    <ul class="product-features" style="background-color: var(--secondary-color); padding: 20px; border-radius: var(--radius);">
+            `;
+            
+            features.forEach(feature => {
+                contentHTML += `<li>${feature}</li>`;
+            });
+            
+            contentHTML += `
+                    </ul>
+                </div>
+            `;
+            
+            detailContent.innerHTML = contentHTML;
+            detailModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Close detail modal
+        function closeDetailModal() {
+            detailModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Get category name
+        function getCategoryName(category) {
+            switch(category) {
+                case 'wedding-dress': return 'Baju Pengantin';
+                case 'photobooth': return 'Photobooth';
+                case 'makeup': return 'Makeup Pernikahan';
+                default: return category;
+            }
+        }
+        
+        // Detail order button click
+        detailOrderBtn.addEventListener('click', () => {
+            closeDetailModal();
+            openBookingModal(currentDetailService, currentDetailPrice);
+        });
+        
+        // Open booking modal with service details
+        function openBookingModal(service, price) {
+            // Format price to Indonesian Rupiah
+            const formattedPrice = new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+            }).format(price);
+            
+            serviceNameInput.value = service;
+            priceInput.value = formattedPrice;
+            modalServiceTitle.textContent = `Pemesanan ${service}`;
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Open modal with service details from order buttons
         openModalButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const service = button.getAttribute('data-service');
                 const price = button.getAttribute('data-price');
-                
-                // Format price to Indonesian Rupiah
-                const formattedPrice = new Intl.NumberFormat('id-ID', {
-                    style: 'currency',
-                    currency: 'IDR',
-                    minimumFractionDigits: 0
-                }).format(price);
-                
-                serviceNameInput.value = service;
-                priceInput.value = formattedPrice;
-                modalServiceTitle.textContent = `Pemesanan ${service}`;
-                
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
+                openBookingModal(service, price);
             });
         });
         
-        // Close modal
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+        // Close modals
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                if (modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                }
+                if (detailModal.style.display === 'block') {
+                    detailModal.style.display = 'none';
+                }
+                document.body.style.overflow = 'auto';
+            });
         });
         
         // Close modal when clicking outside
         window.addEventListener('click', (event) => {
             if (event.target === modal) {
                 modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            if (event.target === detailModal) {
+                detailModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
         });
